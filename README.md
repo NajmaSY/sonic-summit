@@ -2,10 +2,10 @@
 
 ## Names of the team members:
 
-Najma Saeed
-Sarah Barron
-Kara Sealeaf
-Edgars
+- Najma Saeed
+- Sarah Barron
+- Kara Sealeaf
+- Edgars
 
 ## A description of the project
 
@@ -14,10 +14,10 @@ Festival App
 - users can login
 -
 
-MVP
+## MVP
 
 - keep it to one page
-- home page - map, form, artists in slideshow (name and picture of artist)
+- home page - map, form, artists in slideshow (name and picture of artist) - with list to artist page
 - schedule on home page
 - artists page - miniumum 9, 3 in a row
 - artist page - each artist has its own page with its info
@@ -25,6 +25,8 @@ MVP
 - schedule page - for favourited artists
 - if the user is logged in - only show their current schedule
 - if the user is not logged in - show all the festivals with all the details
+
+## Problem Domain
 
 The overall problem domain and how the project solves those problems
 
@@ -37,3 +39,16 @@ Instructions that the user may need to follow in order to get your application u
 Clearly defined API endpoints with sample responses
 
 Clearly defined database schemas
+
+## Conflict Plan
+
+- ask a TA for help
+- standups to organise tasks for the day
+- give everyone the opportunity to speak in standup
+
+## Communication Plan
+
+- trello
+- github repo
+- discord
+- standups every morning -
