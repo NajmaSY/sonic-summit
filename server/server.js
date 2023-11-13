@@ -7,6 +7,7 @@ const PORT = 8080;
 const app = express();
 app.use(cors());
 app.use(express.json());
+console.log(process.env.DATABASE_URL);
 mongoose.connect(process.env.DATABASE_URL);
 
 app.get("/", (_, response) =>

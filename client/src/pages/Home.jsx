@@ -1,5 +1,4 @@
 //imports here
-import "./App.css";
 
 export default function Home() {
   return (
@@ -133,7 +132,5 @@ export default function Home() {
         <button></button>
       </div>
     </>
-
-    //import in footer
   );
 }

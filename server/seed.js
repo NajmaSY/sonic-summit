@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-const Book = require("./festival/artist");
+const Artist = require("./models/artist");
 
 mongoose.connect(process.env.DATABASE_URL);
 
