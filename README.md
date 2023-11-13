@@ -12,7 +12,15 @@
 Festival App
 
 - users can login
--
+
+## User Stories
+
+1. As a festival-goer, I want to easily access the festival schedule on the website, so I can plan my day and not miss any performances.
+2. As an artist, I want a user-friendly platform to view my scheduled performance time and details on the festival website.
+3. As a festival-goer, I want to be able to select my favorite artists so that I can see a separate, personalized schedule that only shows me a schedule for the artists I want to see.
+4. As a first-time visitor, I want a simple and intuitive login process to create an account and personalize my festival experience.
+5. As a festival-goer, I want to be able to store my favorite artists so I can see them again when I log back in.
+6. As a first-time visitor, I want a simple and intuitive login process to create an account and personalize my festival experience.
 
 ## MVP
 
