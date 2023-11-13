@@ -1,4 +1,4 @@
-import Schedule from "../pages/Schedule";
+import MySchedule from "./pages/MySchedule";
 import "./App.css";
 import LoginButton from "./components/LoginButton";
 import LogoutButton from "./components/LogoutButton";
@@ -47,6 +47,7 @@ function App() {
           path="/"
           element={<Home artists={artists} setArtists={setArtists} />}
         />
+        <Route path="/MySchedule" element={<MySchedule />} />
       </Routes>
 
       <footer>
