@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
+import { useState } from "react";
 function App() {
   const [artists, setArtists] = useState([]);
 
@@ -12,7 +13,6 @@ function App() {
     setArtists(res.data);
   }
   return (
-
     <BrowserRouter>
       <header>
         <h1>Festival App</h1>
@@ -29,7 +29,6 @@ function App() {
         <p>&copy: Sonic Summit</p>
       </footer>
     </BrowserRouter>
-
   );
 }
 

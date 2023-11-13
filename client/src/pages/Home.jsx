@@ -1,10 +1,11 @@
 //imports here
-
+import { Link } from "react-router-dom";
+import Logo from "../assets/logo.png";
 export default function Home() {
   return (
     //header in first
     <>
-      <img src="assets/logo.png" alt="" cls />
+      <img src={Logo} alt="" />
       <button>Book Your Spot</button>
 
       <div className="artistSection">
@@ -84,21 +85,23 @@ export default function Home() {
 
       <div className="scheduleSection">
         <table>
-          <tr>
-            <th>Artist</th>
-            <th>Stage</th>
-            <th>Time</th>
-          </tr>
-          <tr>
-            <td>name</td>
-            <td>name</td>
-            <td>name</td>
-          </tr>
-          <tr>
-            <td>12:00</td>
-            <td>12:00</td>
-            <td>12:00</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Artist</th>
+              <th>Stage</th>
+              <th>Time</th>
+            </tr>
+            <tr>
+              <td>name</td>
+              <td>name</td>
+              <td>name</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>12:00</td>
+              <td>12:00</td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -118,10 +121,10 @@ export default function Home() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15134.051595754006!2d-1.7959898604722182!3d55.67698670333329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48874d12b7ff212d%3A0x6b907625500c6583!2sHoly%20Island!5e0!3m2!1sen!2suk!4v1699874310551!5m2!1sen!2suk"
           width="400"
           height="300"
-          style="border:0;"
-          allowfullscreen=""
+          style={{ border: 0 }}
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
 
