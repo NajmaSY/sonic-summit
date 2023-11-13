@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
+
 function App() {
   const [artists, setArtists] = useState([]);
 
@@ -17,7 +18,6 @@ function App() {
     setArtists(res.data);
   }
 
-function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   const admins = ["sarahibarron@hotmail.co.uk"];
@@ -37,7 +37,7 @@ function App() {
       {!isAuthenticated && <LoginButton />}
 
       {admins.includes(user?.email) && <p>can put admin stuff in here</p>}
-  
+
       <header>
         <h1>Festival App</h1>
       </header>
