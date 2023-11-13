@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const artistSchema = new Schema({
   name: String,
   description: String,
-  imgUrl: String,
+  imageUrl: String,
   author: String,
   status: Boolean,
   stage: String,

@@ -15,7 +15,17 @@ async function seed() {
       stage: "One",
       stageTime: 1600,
       favourite: true,
-      youtube: "https://www.youtube.com/watch?v=un8EW82GwKc",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/watch?v=un8EW82GwKc"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       instagram: "https://www.instagram.com/portisheadofficial/?hl=en",
       facebook: "https://www.facebook.com/portishead/?locale=en_GB",
       rating: 4,
@@ -29,7 +39,17 @@ async function seed() {
       stage: "Two",
       stageTime: 1600,
       favourite: true,
-      youtube: "https://www.youtube.com/watch?v=ImKY6TZEyrI",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/watch?v=ImKY6TZEyrI"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       instagram: "https://www.instagram.com/mazzystar/?hl=en",
       facebook: "https://www.facebook.com/MazzyStarOfficial/?locale=en_GB",
       rating: 5,
@@ -43,7 +63,17 @@ async function seed() {
       stage: "Three",
       stageTime: 1600,
       favourite: true,
-      youtube: "https://www.youtube.com/watch?v=j-fWDrZSiZs",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/watch?v=j-fWDrZSiZs"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       instagram: "https://www.instagram.com/dido/?hl=en-gb",
       facebook: "https://www.facebook.com/dido/?locale=en_GB",
       rating: 4,
@@ -57,7 +87,17 @@ async function seed() {
       stage: "One",
       stageTime: 1730,
       favourite: true,
-      youtube: "https://www.youtube.com/watch?v=T0brO3x4h30",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/watch?v=T0brO3x4h30"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       instagram: "https://www.instagram.com/teddysphotos/?hl=en",
       facebook: "https://www.facebook.com/EdSheeranMusic/?locale=en_GB",
       rating: 5,
@@ -71,7 +111,17 @@ async function seed() {
       stage: "Two",
       stageTime: 1730,
       favourite: true,
-      youtube: "https://www.youtube.com/watch?v=pAzyYLsndCg",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/watch?v=pAzyYLsndCg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       instagram: "https://www.instagram.com/beyonce/?hl=en",
       facebook: "https://www.facebook.com/beyonce/?locale=en_GB",
       rating: 5,
@@ -85,53 +135,96 @@ async function seed() {
       stage: "Three",
       stageTime: 1730,
       favourite: true,
-      youtube: "https://www.youtube.com/watch?v=xnvkStb2jT0",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/watch?v=xnvkStb2jT0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       instagram: "https://www.instagram.com/theweeknd/?hl=en",
       facebook: "https://www.facebook.com/theweeknd/?locale=en_GB",
       rating: 5,
     },
     {
-      name: "Arcade Fire",
+      name: "Sharon Van Etten",
+
       description:
-        "Arcade Fire is a Canadian indie rock band from Montréal, Quebec, consisting of husband and wife Win Butler and Régine Chassagne, alongside Richard Reed Parry, Tim Kingsbury and Jeremy Gara.",
-      imageURL:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD63qdUMsBhFfZx_eLD2CSMrvyLqlH1AiBFg&usqp=CAU",
+        "Sharon Katharine Van Etten (born February 26, 1981) is an American singer-songwriter. She has released the albums Because I Was in Love (2009), Epic (2010), Tramp (2012), Are We There (2014), Remind Me Tomorrow (2019) and We've Been Going About This All Wrong (2022).",
+
+      imageUrl:
+        "https://www.billboard.com/wp-content/uploads/media/Sharon-Van-Etten-press-by-Ryan-Pfluger-bb1-2019-billboard-1548.jpg",
       stage: "One",
       stageTime: 1900,
       favourite: true,
-      youtube: "https://www.youtube.com/watch?v=zC30BYR3CUk",
-      instagram: "https://www.instagram.com/arcadefire/",
-      facebook: "https://www.facebook.com/arcadefire/",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/j7sTHoeH0eA?si=q7XE21K3qTinxxYN"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
+
+      instagram: "https://www.instagram.com/sharonvanhalen/?hl=en",
+
+      facebook: "https://www.facebook.com/SharonVanEtten/?locale=en_GB",
       rating: 4,
     },
 
     {
-      name: "Rage Against The Machine",
+      name: "Nickelback",
       description:
-        "Rage Against the Machine is an American rock band from Los Angeles, California. Formed in 1991, the group consists of vocalist Zack de la Rocha, bassist and backing vocalist Tim Commerford, guitarist Tom Morello, and drummer Brad Wilk. ",
-      imageURL:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtR0XXQ67kdtrolV8IBp4CTpTKSIKGSZ5SVQ&usqp=CAU",
+        "Nickelback is a Canadian rock band formed in 1995 in Hanna, Alberta. It is composed of lead guitarist and lead vocalist Chad Kroeger, rhythm guitarist, keyboardist and backing vocalist Ryan Peake, bassist Mike Kroeger and drummer Daniel Adair. It went through several drummer changes between 1995 and 2005, reaching its current lineup when Adair replaced Ryan Vikedal.",
+      imageUrl:
+        "https://miro.medium.com/v2/resize:fit:530/1*mDDtoX0tTcoNQ3z_Rbb5bg.jpeg",
       stage: "Two",
       stageTime: 1900,
-      favourite: true,
-      youtube: "https://www.youtube.com/watch?v=4KXdU3cZbNQ",
-      instagram: "https://www.instagram.com/rageagainstthemachine/",
-      facebook: "https://www.facebook.com/RATM/?locale=en_GB",
-      rating: 5,
+      favourite: false,
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/_1hgVcNzvzY?si=wRlVXI0F28VMV4OM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
+      instagram: "https://www.instagram.com/nickelback/?hl=en",
+      facebook: "https://www.facebook.com/Nickelback/?locale=en_GB",
+      rating: 1,
     },
     {
-      name: "Chase & Status",
+      name: "Björk",
       description:
-        "Chase & Status are an English electronic music duo composed of Saul Milton and Will Kennard. In addition, Andy Gangadeen is the drummer when the band performs live. MC Rage formerly performed as MC with the group, but left in July 2021 to focus on solo ventures.",
-      imageURL:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg4vtzq6uCfiH8mZ2PQAWq1vqV5P3AvxuzNg&usqp=CAU",
+        "Björk Guðmundsdóttir, born 21 November 1965 is an Icelandic singer, songwriter, composer, record producer, and actress. Noted for her distinct voice, three-octave vocal range, bold musical choices, and sometimes eccentric public persona, she has developed an eclectic musical style over a career spanning four-decades, drawing on electronic, folk, pop, experimental, trip hop, jazz, industrial, classical, and avant-garde music.",
+      imageUrl:
+        "https://media.pitchfork.com/photos/63f90e75d169cd0469754e26/master/w_1280%2Cc_limit/Bjork-Post.jpg",
       stage: "Three",
       stageTime: 1900,
       favourite: true,
-      youtube:
-        "https://www.google.com/search?q=chase+and+status+&sca_esv=581884118&rlz=1C1ONGR_en-GBGB1058GB1060&hl=en&biw=682&bih=772&tbm=vid&sxsrf=AM9HkKnVBj_ii088Gcy0WDxGcaEFKGg6DA%3A1699873578372&ei=KgNSZeiXFsb-7_UPw5KXmAQ&ved=0ahUKEwjo1LTG6sCCAxVG_7sIHUPJBUMQ4dUDCA0&uact=5&oq=chase+and+status+&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIhFjaGFzZSBhbmQgc3RhdHVzIDIEECMYJzIIEAAYigUYhgMyCBAAGIoFGIYDMggQABiKBRiGAzIIEAAYigUYhgNIwgVQqAVYqAVwAHgAkAEAmAHdAaAB3QGqAQMyLTG4AQPIAQD4AQGIBgE&sclient=gws-wiz-video#",
-      instagram: "https://www.instagram.com/chaseandstatus/?hl=en",
-      facebook: "https://www.facebook.com/chaseandstatus/",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/gLF-_Z8TK1k?si=c-k5AnU_fwXfuXLq"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
+      instagram: "https://www.instagram.com/bjork/?hl=en",
+      facebook: "https://www.facebook.com/bjork/",
       rating: 5,
     },
 
@@ -144,8 +237,17 @@ async function seed() {
       stage: "One",
       stageTime: 2030,
       favourite: true,
-      youtube:
-        "https://www.youtube.com/watch?v=Wo80bXyEbkE&pp=ygUOTG9uZG9uIEdyYW1tYXI%3D",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/watch?v=Wo80bXyEbkE&pp=ygUOTG9uZG9uIEdyYW1tYXI%3D"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       instagram: "https://www.instagram.com/londongrammar/",
       facebook: "https://www.facebook.com/londongrammar/?locale=en_GB",
       rating: 4,
@@ -161,7 +263,17 @@ async function seed() {
       favourite: true,
       youtube: "https://www.youtube.com/watch?v=HyHNuVaZJ-k",
       instagram: "https://www.instagram.com/gorillaz/?hl=en",
-      facebook: "https://www.facebook.com/Gorillaz/?locale=en_GB",
+      facebook: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.facebook.com/Gorillaz/?locale=en_GB"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       rating: 5,
     },
     {
@@ -173,7 +285,17 @@ async function seed() {
       stage: "Three",
       stageTime: 2030,
       favourite: true,
-      youtube: "https://www.youtube.com/watch?v=gGdGFtwCNBE",
+      youtube: (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/watch?v=gGdGFtwCNBE"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       instagram: "https://www.instagram.com/thekillers/",
       facebook: "https://en-gb.facebook.com/Thekillers/",
       rating: 4,
