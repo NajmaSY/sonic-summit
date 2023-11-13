@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Fondamento&family=Inter:wght@300&display=swap");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("assets/background.png");
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fondamento", cursive;
+  text-transform: uppercase;
+}
