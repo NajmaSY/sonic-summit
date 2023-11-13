@@ -1,9 +1,10 @@
+import Schedule from "../pages/Schedule";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Festival App</h1>
+      <Schedule />
     </>
   );
 }
