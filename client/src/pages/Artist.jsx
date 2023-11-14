@@ -4,18 +4,22 @@ import { useParams } from "react-router-dom";
 import Form from "../components/Form";
 
 export default function Artist() {
-  const [artist, setartist] = useState({});
+  const [artist, setArtist] = useState({});
 
   const params = useParams();
 
   useEffect(() => {
-    getartist();
+    getArtist();
   }, []);
 
-  async function getartist() {
+  async function getArtist() {
     const API = `http://localhost:8080/artists?_id=${params.id}`;
-    const res = await axios.get(API);
-    setartist(res.data[0]);
+    try {
+      const res = await axios.get(API);
+      setArtist(res.data[0]);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
@@ -23,7 +27,7 @@ export default function Artist() {
       <h2>{artist.name}</h2>
       <img src={artist.imgUrl} />
       <p>{artist.description}</p>
-      {artist.name && <Form artist={artist} setartist={setartist} />}
+      {artist.name && <Form artist={artist} setArtist={setArtist} />}
     </div>
   );
 }
