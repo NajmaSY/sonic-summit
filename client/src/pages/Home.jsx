@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
 import Logo from "../assets/logo.png";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 export default function Home({ artists, setArtists, favouriteArtist }) {
   return (
     //header in first
@@ -9,24 +12,26 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
       <button>Book Your Spot</button>
 
       <div className="artistSection">
-        <h2>Artists</h2>
+        <h2 className="artists-carosel">Artists</h2>
         <div>
           {artists.map((artist) => {
             return (
-              <div key={artist._id} className="artistHome">
-                <Link to={`/artist/${artist._id}`}>
-                  <h2>{artist.name}</h2>
-                  <img src={artist.imageUrl} />
-                </Link>
-                <p>{artist.description}</p>
 
-                <button onClick={() => favouriteArtist(artist._status)}>
-                  ❤️
-                </button>
-              </div>
+              <carousel className="crsl" autoPlay infinateLoop centerMode>
+                <div key={artist._id} className="artistHome">
+                  <Link to={`/artist/${artist._id}`}>
+                    <img src={artist.imageUrl} className="image-carosel" />
+                    <h2 className="artist-name-carosel">{artist.name}</h2>
+                  </Link>
+
+
+                  <button onClick={() => favouriteArtist(artist.favourite)}>
+                    ❤️
+                  </button>
+                </div>
+              </carousel>
             );
           })}
-          <Form artist={artists} setArtists={setArtists} />
         </div>
       </div>
 

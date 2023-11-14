@@ -6,6 +6,9 @@ body {
   background: url("assets/background.png");
   background-size: cover;
   font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -15,6 +18,50 @@ h3 {
   text-transform: uppercase;
   color: white;
 }
+
+
+.crsl {
+  width: 400px;
+  margin: auto;
+  align-items: center;
+}
+
+.artists-carosel {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.artist-name-carosel {
+  color: black;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.image-carosel {
+  max-width: 400px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.artistHome {
+  font-family: "Inter", sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  z-index: 1;
+  position: relative;
+  background-color: rgb(201, 174, 219);
+  overflow: scroll;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
 .container {
 }
@@ -38,4 +85,5 @@ h3 {
 }
 
 .box6 {
+
 }
