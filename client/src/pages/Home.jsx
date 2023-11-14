@@ -1,8 +1,8 @@
-//imports here
 import { Link } from "react-router-dom";
+import Form from "../components/Form";
 import Logo from "../assets/logo.png";
+export default function Home({ artists, setArtists, favouriteArtist }) {
 
-export default function Home() {
   return (
     //header in first
     <>
@@ -11,76 +11,21 @@ export default function Home() {
 
       <div className="artistSection">
         <h2>Artists</h2>
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
-        </div>
-
-        <div className="artistHome">
-          <img src="img" alt="artist image" />
-          <button>❤️</button>
-          <h3>artist name</h3>
+        <div>
+          {artists.map((artist) => {
+            return (
+              <div key={artist._id} className="artistHome">
+                <Link to={`/artist/${artist._id}`}>
+                  <h2>{artist.name}</h2>
+                  <img src={artist.imgUrl} />
+                </Link>
+                <button onClick={() => favouriteArtist(artist._status)}>
+                  ❤️
+                </button>
+              </div>
+            );
+          })}
+          <Form artist={artists} setArtists={setArtists} />
         </div>
       </div>
 
