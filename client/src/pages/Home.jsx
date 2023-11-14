@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
 import Logo from "../assets/logo.png";
+
 export default function Home({ artists, setArtists, favouriteArtist }) {
+
   return (
     //header in first
     <>
