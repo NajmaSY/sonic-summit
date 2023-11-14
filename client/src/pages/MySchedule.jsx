@@ -1,5 +1,5 @@
 import React from "react";
-import "./schedule.css";
+// import "./schedule.css";
 const Schedule = () => {
   return (
     <body>
