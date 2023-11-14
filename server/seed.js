@@ -150,7 +150,7 @@ async function seed() {
       rating: 4,
     },
     {
-      name: "The Gorillaz",
+      name: "Gorillaz",
       description:
         "Gorillaz are an English virtual band created in 1998 by musician Damon Albarn and artist Jamie Hewlett, from London. The band primarily consists of four fictional members: 2-D, Murdoc Niccals, Noodle and Russel Hobbs.",
       imageUrl:

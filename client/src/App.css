@@ -19,6 +19,7 @@ h3 {
   color: white;
 }
 
+
 .crsl {
   width: 400px;
   margin: auto;
@@ -61,4 +62,28 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+.container {
+}
+
+.containerTwo {
+}
+
+.box {
+}
+
+.box2 {
+}
+
+.box3 {
+}
+
+.box4 {
+}
+
+.box5 {
+}
+
+.box6 {
+
 }
