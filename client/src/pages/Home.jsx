@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import Form from "../components/Form";
 import Logo from "../assets/logo.png";
 export default function Home({ artists, setArtists, favouriteArtist }) {
-
-
   return (
     //header in first
     <>
@@ -18,8 +16,19 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
               <div key={artist._id} className="artistHome">
                 <Link to={`/artist/${artist._id}`}>
                   <h2>{artist.name}</h2>
-                  <img src={artist.imgUrl} />
+                  <img src={artist.imageUrl} />
                 </Link>
+                <p>{artist.description}</p>
+                <iframe
+                  width="560"
+                  height="315"
+                  src={artist.youtube}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+
                 <button onClick={() => favouriteArtist(artist._status)}>
                   ❤️
                 </button>

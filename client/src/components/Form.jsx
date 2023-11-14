@@ -8,12 +8,12 @@ export default function Form({ artists, setArtists, artist, setArtist }) {
       imageUrl: "",
       description: "",
       stage: "",
-      stageTime: "",
+      stageTime: 1200,
       favourite: false,
       youtube: "",
       instagram: "",
       facebook: "",
-      rating: "",
+      rating: 5,
     }
   );
 
