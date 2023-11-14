@@ -1,51 +1,48 @@
 export default function MySchedule() {
   return (
-    <body>
+    <div>
       <h1>Schedule</h1>
-
-      <div className="container">
-        <section className="left">
+      <div className="scheduleflex">
+        <div className="containerOne">
           <ul className="box1">
-            <li>Time:</li>
-            <li>Artist:</li>
-            <li>Stage:</li>
+            <li>TIME:</li>
+            <li>ARTIST:</li>
+            <li>STAGE:</li>
           </ul>
 
           <ul className="box2">
-            <li>Time:</li>
-            <li>Artist:</li>
-            <li>Stage:</li>
+            <li>TIME:</li>
+            <li>ARTIST:</li>
+            <li>STAGE:</li>
           </ul>
 
           <ul className="box3">
-            <li>Time:</li>
-            <li>Artist:</li>
-            <li>Stage:</li>
+            <li>TIME:</li>
+            <li>ARTIST:</li>
+            <li>STAGE:</li>
           </ul>
-        </section>
-      </div>
+        </div>
 
-      <div className="containerTwo">
-        <section className="right">
+        <div className="containerTwo">
           <ul className="box4">
-            <li>Time:</li>
-            <li>Artist:</li>
-            <li>Stage:</li>
+            <li>TIME:</li>
+            <li>ARTIST:</li>
+            <li>STAGE:</li>
           </ul>
 
           <ul className="box5">
-            <li>Time:</li>
-            <li>Artist:</li>
-            <li>Stage:</li>
+            <li>TIME:</li>
+            <li>ARTIST:</li>
+            <li>STAGE:</li>
           </ul>
 
           <ul className="box6">
-            <li>Time:</li>
-            <li>Artist:</li>
-            <li>Stage:</li>
+            <li>TIME:</li>
+            <li>ARTIST:</li>
+            <li>STAGE:</li>
           </ul>
-        </section>
+        </div>
       </div>
-    </body>
+    </div>
   );
 }

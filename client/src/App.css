@@ -16,26 +16,33 @@ h3 {
   color: white;
 }
 
-.container {
+.scheduleflex {
+  display: flex;
+}
+.containerOne {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
 }
 
 .containerTwo {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
 }
 
-.box {
-}
-
-.box2 {
-}
-
-.box3 {
-}
-
-.box4 {
-}
-
-.box5 {
-}
-
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
 .box6 {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  line-height: 2;
 }
