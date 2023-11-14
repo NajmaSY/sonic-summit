@@ -1,5 +1,4 @@
-import React from "react";
-const Schedule = () => {
+export default function MySchedule() {
   return (
     <body>
       <h1>Schedule</h1>
@@ -49,6 +48,4 @@ const Schedule = () => {
       </div>
     </body>
   );
-};
-
-export default Schedule;
+}
