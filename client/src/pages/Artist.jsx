@@ -25,7 +25,7 @@ export default function Artist() {
   return (
     <div>
       <h2>{artist.name}</h2>
-      <img src={artist.imgUrl} />
+      <img src={artist.imageUrl} />
       <p>{artist.description}</p>
       {artist.name && <Form artist={artist} setArtist={setArtist} />}
     </div>

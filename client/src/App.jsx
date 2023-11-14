@@ -12,17 +12,17 @@ import { useState, useEffect } from "react";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
+  const [artists, setArtists] = useState([]);
 
   const admins = ["sarahibarron@hotmail.co.uk", "najmasy20@gmail.com"];
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-  const [artists, setArtists] = useState([]);
 
   useEffect(() => {
     getArtists();
   }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   async function getArtists() {
     const API = `http://localhost:8080/artists`;
