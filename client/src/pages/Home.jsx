@@ -1,6 +1,7 @@
 //imports here
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
+
 export default function Home() {
   return (
     //header in first
