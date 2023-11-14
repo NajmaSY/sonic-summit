@@ -1,7 +1,7 @@
 export default function MySchedule() {
   return (
     <div>
-      <h1>Schedule</h1>
+      <h1 className="h1schedule">Schedule</h1>
       <div className="scheduleflex">
         <div className="containerOne">
           <ul className="box1">
