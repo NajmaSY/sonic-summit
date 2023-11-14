@@ -16,14 +16,12 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
         <div>
           {artists.map((artist) => {
             return (
-
               <carousel className="crsl" autoPlay infinateLoop centerMode>
                 <div key={artist._id} className="artistHome">
                   <Link to={`/artist/${artist._id}`}>
                     <img src={artist.imageUrl} className="image-carosel" />
                     <h2 className="artist-name-carosel">{artist.name}</h2>
                   </Link>
-
 
                   <button onClick={() => favouriteArtist(artist.favourite)}>
                     ❤️
@@ -35,54 +33,56 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
         </div>
       </div>
 
-      <div className="scheduleSection">
-        <table>
-          <tr>
-            <td>MAIN STAGE</td>
-            <td>ARTIST</td>
-            <td>SECOND STAGE</td>
-            <td>ARTIST</td>
-          </tr>
-          <tr>
-            <td>22:00</td>
-            <td>Gorillaz</td>
-            <td>21:30</td>
-            <td>Sharon Van Etten</td>
-          </tr>
-          <tr>
-            <td>21:00</td>
-            <td>Björk</td>
-            <td>20:30</td>
-            <td>Portishead</td>
-          </tr>
-          <tr>
-            <td>20:00</td>
-            <td>Beyonce</td>
-            <td>19:30</td>
-            <td>Ed Sheeran</td>
-          </tr>
-          <tr>
-            <td>19:00</td>
-            <td>The Killers</td>
-            <td>18:30</td>
-            <td>Dido</td>
-          </tr>
-          <tr>
-            <td>18:00</td>
-            <td>The Weekend</td>
-            <td>17:30</td>
-            <td>Mazzy Star</td>
-          </tr>
-          <tr>
-            <td>17:00</td>
-            <td>London Grammar</td>
-            <td>16:30</td>
-            <td>Nickelback</td>
-          </tr>
-        </table>
-      </div>
+      <tbody>
+        <div className="scheduleSection">
+          <table>
+            <tr>
+              <td>MAIN STAGE</td>
+              <td>ARTIST</td>
+              <td>SECOND STAGE</td>
+              <td>ARTIST</td>
+            </tr>
+            <tr>
+              <td>22:00</td>
+              <td>Gorillaz</td>
+              <td>21:30</td>
+              <td>Sharon Van Etten</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>Björk</td>
+              <td>20:30</td>
+              <td>Portishead</td>
+            </tr>
+            <tr>
+              <td>20:00</td>
+              <td>Beyonce</td>
+              <td>19:30</td>
+              <td>Ed Sheeran</td>
+            </tr>
+            <tr>
+              <td>19:00</td>
+              <td>The Killers</td>
+              <td>18:30</td>
+              <td>Dido</td>
+            </tr>
+            <tr>
+              <td>18:00</td>
+              <td>The Weekend</td>
+              <td>17:30</td>
+              <td>Mazzy Star</td>
+            </tr>
+            <tr>
+              <td>17:00</td>
+              <td>London Grammar</td>
+              <td>16:30</td>
+              <td>Nickelback</td>
+            </tr>
+          </table>
+        </div>
+      </tbody>
 
-      <div classNameName="aboutSection">
+      <div className="aboutSection">
         <h2>About</h2>
         <h3> Welcome to Sonic Summit - Where Music Meets the Mountains!</h3>
 
@@ -109,9 +109,9 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
           width="400"
           height="300"
           style="border:0;"
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
 
