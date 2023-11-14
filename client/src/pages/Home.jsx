@@ -19,15 +19,6 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
                   <img src={artist.imageUrl} />
                 </Link>
                 <p>{artist.description}</p>
-                <iframe
-                  width="560"
-                  height="315"
-                  src={artist.youtube}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
 
                 <button onClick={() => favouriteArtist(artist._status)}>
                   ❤️
