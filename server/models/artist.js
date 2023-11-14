@@ -5,8 +5,6 @@ const artistSchema = new Schema({
   name: String,
   description: String,
   imageUrl: String,
-  author: String,
-  status: Boolean,
   stage: String,
   stageTime: Number,
   favourite: Boolean,
