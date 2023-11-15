@@ -13,7 +13,7 @@ export default function Home({ artists, favouriteArtist }) {
       <img src={Logo} alt="" />
       <button>Book Your Spot</button>
 
-      <div className="artistSection">
+      <div className="artistSection" href="#artists">
         <h2 className="artists-carosel">Artists</h2>
         <Carousel className="crsl" autoPlay infiniteLoop centerMode>
           {artists.map((artist) => (

@@ -42,18 +42,34 @@ function App() {
 
   return (
     <BrowserRouter>
-      <header>
-        {isAuthenticated && (
-          <div>
-            <Profile />
-            <LogoutButton />
-          </div>
-        )}
-        {!isAuthenticated && <LoginButton />}
-
-        {admins.includes(user?.email) && <p>can put admin stuff in here</p>}
-
-        <h1>Sonic Summit</h1>
+      <header className="header">
+        <nav>
+          <ul>
+            <li className="loginSection">
+              <a href="#login" className="navBar">
+                {isAuthenticated && (
+                  <div className="navBar">
+                    <Profile />
+                    <LogoutButton />
+                  </div>
+                )}
+                {!isAuthenticated && <LoginButton />}
+              </a>
+            </li>
+            <li>
+              <a href="#artists">Artists</a>
+            </li>
+            <li>
+              <a href="#schedule">My Schedule</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#book">Book</a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
       <Routes>
