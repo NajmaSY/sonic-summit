@@ -1,8 +1,29 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./MySchedule";
 import "./MySchedule.css";
 // what format is the schedule data coming from the server
+
+//DONT DELETE
+//NEW CODE - CHECK WITH TA
+//fetching data from server
+// export default function MySchedule(){
+//   const [mySchedule, setMySchedule]= useState([])
+//   const [userEmail, setUserEmail]=useState("something")//something for now, but will replace with actual user email
+
+// useEffect(()=>{
+// const fetchMySchedule = async ()=>{
+//   try{
+//     const response = await axios.get(`http://localhost:8080/MySchedule?userEmail=${userEmail}`)
+//     setMySchedule(response.data)
+//   }catch (error){
+//     console.log(error)
+//   }
+// }
+// fetchMySchedule();
+// }, [userEmail])
+// }
+///
 
 async function deleteArtist(event) {
   event.preventDefault();
@@ -87,6 +108,7 @@ export default function MySchedule() {
       <h1 className="h1schedule">My Schedule</h1>
       <div className="scheduleflex">
         <div className="containerOne">
+          {/* OR {mySchedule.map((artist, index)=>)} */}
           {columnA.map((artist, index) => (
             <div key={index} className="scheduleItem">
               <ul>
