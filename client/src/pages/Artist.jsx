@@ -1,3 +1,4 @@
+import "../Artist.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -33,59 +34,55 @@ export default function Artist() {
   }
 
   return (
-    <div className="newArtist">
-      <h2 className="artName">{artist.name}</h2>
-      {artist.youtube && (
-        <a
-          href={artist.youtube}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="artYoutube"
-        >
-          <img src={youtubeIcon} alt="youtube link" className="yTicon" />
-        </a>
-      )}
-      {artist.facebook && (
-        <a
-          href={artist.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="artFacebook"
-        >
-          <img src={facebookIcon} className="fBicon" />
-        </a>
-      )}
-      {artist.instagram && (
-        <a
-          href={artist.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="artInsta"
-        >
-          <img src={instaIcon} className="iTicon" />
-        </a>
-      )}
-      <img src={artist.imageUrl} className="artImage" />
-      <p className="favArt">
-        FAVOURITE THIS ARTIST: {artist.favourite ? liked : notLiked}
-      </p>
-      <p className="aboutArt">ABOUT: {artist.description}</p>
-      <p className="aboutArt">STAGE: {artist.stage}</p>
-      <p className="timeArt">STAGE TIME: {artist.stageTime}</p>
-      {artist.name && (
-        <Form artist={artist} setArtist={setArtist} className="artForm" />
-      )}
-      <p className="artListen">LISTEN HERE: </p>
-      <iframe
-        width="560"
-        height="315"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        src={artist.youtube}
-        className="artVideo"
-      ></iframe>
+    <div className="artistContainer">
+      <div className="headerItem">
+        <h2>{artist.name}</h2>
+      </div>
+
+      <div className="iconItem">
+        {artist.youtube && (
+          <a href={artist.youtube} target="_blank" rel="noopener noreferrer">
+            <img src={youtubeIcon} alt="youtube link" />
+          </a>
+        )}
+        {artist.facebook && (
+          <a href={artist.facebook} target="_blank" rel="noopener noreferrer">
+            <img src={facebookIcon} />
+          </a>
+        )}
+        {artist.instagram && (
+          <a href={artist.instagram} target="_blank" rel="noopener noreferrer">
+            <img src={instaIcon} />
+          </a>
+        )}
+      </div>
+
+      <div className="imageItem">
+        <img src={artist.imageUrl} />
+      </div>
+
+      <div className="aboutItem">
+        <p>FAVOURITE THIS ARTIST: {artist.favourite ? liked : notLiked}</p>
+        <p>ABOUT: {artist.description}</p>
+        <p>STAGE: {artist.stage}</p>
+        <p>STAGE TIME: {artist.stageTime}</p>
+      </div>
+
+      <div className="listenItem">
+        <p>LISTEN HERE: </p>
+        <iframe
+          width="560"
+          height="315"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          src={artist.youtube}
+        ></iframe>
+      </div>
+      <div className="formItem">
+        {artist.name && <Form artist={artist} setArtist={setArtist} />}
+      </div>
     </div>
   );
 }
