@@ -64,7 +64,7 @@ app.put("/artists/:id/favorite", async (request, response) => {
     const userId = request.body.userId;
 
     //Find the user in the database
-    const user = await User.findById(userId);
+    const user = await User.findByIdAndUpdate(userId);
 
     //Check if the artist is already favorited by the user
     const isFavorited = user.favoriteArtists.some((fav) =>
