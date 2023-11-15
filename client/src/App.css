@@ -22,6 +22,7 @@ h3 {
 .h1schedule {
   text-align: center;
   font-size: 50px;
+}
 .crsl {
   width: 400px;
   margin: auto;
@@ -106,11 +107,9 @@ h3 {
   line-height: 2;
 }
 
-
 .box6 {
-} 
+}
 
 .myschedulebuttons {
   display: flex;
 }
-
