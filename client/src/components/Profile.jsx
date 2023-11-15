@@ -11,7 +11,7 @@ const Profile = () => {
 
   return (
     isAuthenticated && (
-      <div className="navBar">
+      <div className="navBarSpace">
         <img src={user.picture} alt={user.name} className="loginImg" />
         <p>Hello {user.name}!</p>
       </div>

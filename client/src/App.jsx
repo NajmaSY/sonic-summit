@@ -9,6 +9,9 @@ import Artist from "./pages/Artist";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Fb from "./assets/fb.png";
+import Yt from "./assets/yt.png";
+import Ig from "./assets/ig.png";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -48,7 +51,7 @@ function App() {
             <li className="loginSection">
               <a href="#login" className="navBar">
                 {isAuthenticated && (
-                  <div className="navBar">
+                  <div className="navBarLogin">
                     <Profile />
                     <LogoutButton />
                   </div>
@@ -88,7 +91,10 @@ function App() {
       </Routes>
 
       <footer>
-        <p>&copy: Sonic Summit</p>
+        <p>&copy; Sonic Summit // Created by Najma, Kara, Ed & Sarah. </p>
+        <img src={Fb} alt="" className="footerIcon" />
+        <img src={Ig} alt="" className="footerIcon" />
+        <img src={Yt} alt="" className="footerIcon" />
       </footer>
     </BrowserRouter>
   );

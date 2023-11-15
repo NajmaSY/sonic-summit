@@ -124,18 +124,18 @@ header {
   padding: 10px 20px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: white;
 }
 
 nav {
-  text-align: right;
+  text-align: center;
 }
 
 ul {
   list-style: none;
-  padding: 0px 30px;
+  padding: 0px 40px;
   margin: 0;
 }
 
@@ -148,7 +148,8 @@ a {
   color: #fff;
   font-size: 16px;
   transition: color 0.3s;
-  padding-left: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 a:hover {
@@ -156,29 +157,62 @@ a:hover {
 }
 
 .loginImg {
-  max-height: 2em;
+  max-height: 30px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 
 .navBar {
   display: flex;
-  justify-content: flex-start;
-  padding: 10px 30px;
-  margin-left: 10px;
-  margin-right: 20px;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
   margin-top: 5px;
 }
 
 .logOutAndInButton {
   max-height: 30px;
   min-width: 100px;
-  font-family: "Fondamento", cursive;
+  padding: 3px;
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
+  font-weight: 600;
+  background-color: rgba(184, 181, 223, 0.549);
+  letter-spacing: 3px;
   border-radius: 12px;
+  align-items: center;
 }
 
-.loginSection {
-  width: 50%;
-  display: inline-flex;
-  margin-right: 20px;
-  margin-top: 5px;
+.navBarLogin {
+  justify-content: space-between;
+  display: flex;
+  align-items: baseline;
+}
+
+.navBarSpace {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+/*footer */
+
+.footerIcon {
+  max-height: 2em;
+  padding-left: 20px;
+}
+
+footer {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #411f5273;
 }
