@@ -14,7 +14,7 @@ function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
   const [artists, setArtists] = useState([]);
 
-  const admins = ["sarahibarron@hotmail.co.uk", "najmasy20@gmail.com"];
+  const admins = ["sarahibarron@hotmail.co.uk", "najmasy20@gmail.com", "kara.sealeaf13@gmail.com"];
 
   useEffect(() => {
     getArtists();

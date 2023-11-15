@@ -33,30 +33,49 @@ export default function Artist() {
   }
 
   return (
-    <div>
-      <h2>{artist.name}</h2>
+    <div className="newArtist">
+      <h2 className="artName">{artist.name}</h2>
       {artist.youtube && (
-        <a href={artist.youtube} target="_blank" rel="noopener noreferrer">
-          <img src={youtubeIcon} alt="youtube link" />
+        <a
+          href={artist.youtube}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="artYoutube"
+        >
+          <img src={youtubeIcon} alt="youtube link" className="yTicon" />
         </a>
       )}
       {artist.facebook && (
-        <a href={artist.facebook} target="_blank" rel="noopener noreferrer">
-          <img src={facebookIcon} />
+        <a
+          href={artist.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="artFacebook"
+        >
+          <img src={facebookIcon} className="fBicon" />
         </a>
       )}
       {artist.instagram && (
-        <a href={artist.instagram} target="_blank" rel="noopener noreferrer">
-          <img src={instaIcon} />
+        <a
+          href={artist.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="artInsta"
+        >
+          <img src={instaIcon} className="iTicon" />
         </a>
       )}
-      <img src={artist.imageUrl} />
-      <p>FAVOURITE THIS ARTIST: {artist.favourite ? liked : notLiked}</p>
-      <p>ABOUT: {artist.description}</p>
-      <p>STAGE: {artist.stage}</p>
-      <p>STAGE TIME: {artist.stageTime}</p>
-      {artist.name && <Form artist={artist} setArtist={setArtist} />}
-      <p>LISTEN HERE: </p>
+      <img src={artist.imageUrl} className="artImage" />
+      <p className="favArt">
+        FAVOURITE THIS ARTIST: {artist.favourite ? liked : notLiked}
+      </p>
+      <p className="aboutArt">ABOUT: {artist.description}</p>
+      <p className="aboutArt">STAGE: {artist.stage}</p>
+      <p className="timeArt">STAGE TIME: {artist.stageTime}</p>
+      {artist.name && (
+        <Form artist={artist} setArtist={setArtist} className="artForm" />
+      )}
+      <p className="artListen">LISTEN HERE: </p>
       <iframe
         width="560"
         height="315"
@@ -65,6 +84,7 @@ export default function Artist() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
         src={artist.youtube}
+        className="artVideo"
       ></iframe>
     </div>
   );
