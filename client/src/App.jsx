@@ -17,7 +17,11 @@ function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
   const [artists, setArtists] = useState([]);
 
-  const admins = ["sarahibarron@hotmail.co.uk", "najmasy20@gmail.com", "kara.sealeaf13@gmail.com"];
+  const admins = [
+    "sarahibarron@hotmail.co.uk",
+    "najmasy20@gmail.com",
+    "kara.sealeaf13@gmail.com",
+  ];
 
   useEffect(() => {
     getArtists();
@@ -60,10 +64,13 @@ function App() {
               </a>
             </li>
             <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
               <a href="#artists">Artists</a>
             </li>
             <li>
-              <a href="#schedule">My Schedule</a>
+              <a href="/MySchedule">My Schedule</a>
             </li>
             <li>
               <a href="#about">About</a>

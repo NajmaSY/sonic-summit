@@ -38,8 +38,8 @@ export default function Home({ artists }) {
     <>
       <img src={Logo} alt="" />
       <button>Book Your Spot</button>
-
-      <div className="artistSection" href="#artists">
+      <a id="artists"></a>
+      <div className="artistSection">
         <h2 className="artists-carosel">Artists</h2>
         <Carousel className="crsl" autoPlay infiniteLoop centerMode>
           {artists.map((artist) => (
@@ -105,7 +105,7 @@ export default function Home({ artists }) {
           </tbody>
         </table>
       </div>
-
+      <a id="about"></a>
       <div className="aboutSection">
         <h2>About</h2>
         <h3> Welcome to Sonic Summit - Where Music Meets the Mountains!</h3>
@@ -138,7 +138,7 @@ export default function Home({ artists }) {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe> */}
       </div>
-
+      <a id="book"></a>
       <div className="bookingSection">
         <img src="" alt="" />
         <h1>Save Your Spot</h1>
