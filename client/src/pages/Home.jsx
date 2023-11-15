@@ -15,7 +15,10 @@ export default function Home({ artists }) {
     console.log("clicking!");
     try {
       const userId = "something";
-      let response = axios.put("/artists/id/favourite", userId);
+      let response = axios.put(
+        `http://localhost:8080/artists/${artistID}/favourite`,
+        userId
+      );
       let updatedArtist = response.data;
 
       const updatedArtists = artists.map((artist) => {
