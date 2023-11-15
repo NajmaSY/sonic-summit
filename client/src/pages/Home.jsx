@@ -33,8 +33,8 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
         </div>
       </div>
 
-      <tbody>
-        <div className="scheduleSection">
+      <div className="scheduleSection">
+        <tbody>
           <table>
             <tr>
               <td>MAIN STAGE</td>
@@ -79,8 +79,8 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
               <td>Nickelback</td>
             </tr>
           </table>
-        </div>
-      </tbody>
+        </tbody>
+      </div>
 
       <div className="aboutSection">
         <h2>About</h2>
