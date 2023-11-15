@@ -58,3 +58,7 @@ h3 {
   border-bottom: 2px solid #ccc;
   line-height: 2;
 }
+
+.myschedulebuttons {
+  display: flex;
+}
