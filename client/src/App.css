@@ -19,6 +19,9 @@ h3 {
   color: white;
 }
 
+.h1schedule {
+  text-align: center;
+  font-size: 50px;
 .crsl {
   width: 400px;
   margin: auto;
@@ -64,24 +67,50 @@ h3 {
 }
 .container {
 }
+.scheduleflex {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid #ccc;
+  margin: 5px;
+  padding: 10px;
+  opacity: 5;
+}
+.containerOne {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
+}
 
 .containerTwo {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
 }
 
-.box {
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  line-height: 2;
 }
 
-.box2 {
-}
-
-.box3 {
-}
-
-.box4 {
-}
-
-.box5 {
-}
 
 .box6 {
 } 
+
+.myschedulebuttons {
+  display: flex;
+}
+
