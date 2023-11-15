@@ -34,8 +34,8 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
       </div>
 
       <div className="scheduleSection">
-        <tbody>
-          <table>
+        <table>
+          <tbody>
             <tr>
               <td>MAIN STAGE</td>
               <td>ARTIST</td>
@@ -78,8 +78,8 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
               <td>16:30</td>
               <td>Nickelback</td>
             </tr>
-          </table>
-        </tbody>
+          </tbody>
+        </table>
       </div>
 
       <div className="aboutSection">
@@ -104,7 +104,7 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
         </p>
         <h3>Get in touch</h3>
         <p>Email: Phone:</p>
-        <iframe
+        {/* <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31119.385489286!2d-2.404818897800208!3d55.3684140520141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487d8ed9a3a41967%3A0xfb85d138cda28d66!2sThe%20Cheviot%20Hills!5e0!3m2!1sen!2suk!4v1699963731287!5m2!1sen!2suk"
           width="400"
           height="300"
@@ -112,10 +112,10 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        ></iframe> */}
       </div>
 
-      <div classNameName="bookingSection">
+      <div className="bookingSection">
         <img src="" alt="" />
         <h1>Save Your Spot</h1>
         <form action=""></form>
