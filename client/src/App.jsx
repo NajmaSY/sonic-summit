@@ -9,12 +9,15 @@ import Artist from "./pages/Artist";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Fb from "./assets/fb.png";
+import Yt from "./assets/yt.png";
+import Ig from "./assets/ig.png";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
   const [artists, setArtists] = useState([]);
 
-  const admins = ["sarahibarron@hotmail.co.uk", "najmasy20@gmail.com"];
+  const admins = ["sarahibarron@hotmail.co.uk", "najmasy20@gmail.com", "kara.sealeaf13@gmail.com"];
 
   useEffect(() => {
     getArtists();
@@ -42,18 +45,34 @@ function App() {
 
   return (
     <BrowserRouter>
-      <header>
-        {isAuthenticated && (
-          <div>
-            <Profile />
-            <LogoutButton />
-          </div>
-        )}
-        {!isAuthenticated && <LoginButton />}
-
-        {admins.includes(user?.email) && <p>can put admin stuff in here</p>}
-
-        <h1>Sonic Summit</h1>
+      <header className="header">
+        <nav>
+          <ul>
+            <li className="loginSection">
+              <a href="#login" className="navBar">
+                {isAuthenticated && (
+                  <div className="navBarLogin">
+                    <Profile />
+                    <LogoutButton />
+                  </div>
+                )}
+                {!isAuthenticated && <LoginButton />}
+              </a>
+            </li>
+            <li>
+              <a href="#artists">Artists</a>
+            </li>
+            <li>
+              <a href="#schedule">My Schedule</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#book">Book</a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
       <Routes>
@@ -72,7 +91,10 @@ function App() {
       </Routes>
 
       <footer>
-        <p>&copy: Sonic Summit</p>
+        <p>&copy; Sonic Summit // Created by Najma, Kara, Ed & Sarah. </p>
+        <img src={Fb} alt="" className="footerIcon" />
+        <img src={Ig} alt="" className="footerIcon" />
+        <img src={Yt} alt="" className="footerIcon" />
       </footer>
     </BrowserRouter>
   );

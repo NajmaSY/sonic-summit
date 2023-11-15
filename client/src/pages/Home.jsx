@@ -3,39 +3,63 @@ import Form from "../components/Form";
 import Logo from "../assets/logo.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import liked from "../assets/liked.png";
+import notLiked from "../assets/notliked.png";
+import { useState } from "react";
+import axios from "axios";
 
-export default function Home({ artists, setArtists, favouriteArtist }) {
+export default function Home({ artists }) {
+  const [favourite, setFavourite] = useState({});
+
+  function toggleFav(artistID) {
+    console.log("clicking!");
+    try {
+      const userId = "something";
+      let response = axios.put("/artists/id/favourite", userId);
+      let updatedArtist = response.data;
+
+      const updatedArtists = artists.map((artist) => {
+        console.log(artist);
+        // check through artist and flip favourites value to opposite of whatever it is now.
+        if (artistID === artist._id) {
+          return updatedArtist;
+        }
+        return artist;
+      });
+      setFavourite(updatedArtists);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  console.log(artists);
   return (
     //header in first
     <>
       <img src={Logo} alt="" />
       <button>Book Your Spot</button>
 
-      <div className="artistSection">
+      <div className="artistSection" href="#artists">
         <h2 className="artists-carosel">Artists</h2>
-        <div>
-          {artists.map((artist) => {
-            return (
-              <carousel className="crsl" autoPlay infinateLoop centerMode>
-                <div key={artist._id} className="artistHome">
-                  <Link to={`/artist/${artist._id}`}>
-                    <img src={artist.imageUrl} className="image-carosel" />
-                    <h2 className="artist-name-carosel">{artist.name}</h2>
-                  </Link>
+        <Carousel className="crsl" autoPlay infiniteLoop centerMode>
+          {artists.map((artist) => (
+            <div key={artist._id} className="artistHome">
+              <Link to={`/artist/${artist._id}`}>
+                <img src={artist.imageUrl} className="image-carosel" />
+                <h2 className="artist-name-carosel">{artist.name}</h2>
+              </Link>
 
-                  <button onClick={() => favouriteArtist(artist.favourite)}>
-                    ❤️
-                  </button>
-                </div>
-              </carousel>
-            );
-          })}
-        </div>
+              <button onClick={() => toggleFav(artist._id)}>
+                <img src={artist.favourite ? liked : notLiked} alt="heart" />
+              </button>
+            </div>
+          ))}
+        </Carousel>
       </div>
 
-      <tbody>
-        <div className="scheduleSection">
-          <table>
+      <div className="scheduleSection">
+        <table>
+          <tbody>
             <tr>
               <td>MAIN STAGE</td>
               <td>ARTIST</td>
@@ -78,9 +102,9 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
               <td>16:30</td>
               <td>Nickelback</td>
             </tr>
-          </table>
-        </div>
-      </tbody>
+          </tbody>
+        </table>
+      </div>
 
       <div className="aboutSection">
         <h2>About</h2>
@@ -104,7 +128,7 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
         </p>
         <h3>Get in touch</h3>
         <p>Email: Phone:</p>
-        <iframe
+        {/* <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31119.385489286!2d-2.404818897800208!3d55.3684140520141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487d8ed9a3a41967%3A0xfb85d138cda28d66!2sThe%20Cheviot%20Hills!5e0!3m2!1sen!2suk!4v1699963731287!5m2!1sen!2suk"
           width="400"
           height="300"
@@ -112,10 +136,10 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        ></iframe> */}
       </div>
 
-      <div classNameName="bookingSection">
+      <div className="bookingSection">
         <img src="" alt="" />
         <h1>Save Your Spot</h1>
         <form action=""></form>

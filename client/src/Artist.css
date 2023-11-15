@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Fondamento&family=Inter:wght@300&display=swap");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("assets/background.png");
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.artistContainer {
+  height: 75vh;
+  width: 75vw;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: blueviolet;
+}
+.headerItem {
+  font-family: "Inter", sans-serif;
+  color: white;
+  justify-content: space-between;
+  align-self: flex-start;
+}
+.iconItem {
+  max-width: 10px;
+  max-height: 10px;
+  background: none;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.imageItem {
+  max-width: 50px;
+  max-height: 50px;
+  justify-content: flex-start;
+  align-self: center;
+}
+/* .aboutItem {
+}*/
+.listenItem {
+  max-width: 150px;
+  max-height: 100px;
+  justify-content: flex-baseline;
+  align-self: baseline;
+}
+.formItem {
+  justify-content: flex-end;
+  align-self: flex-end;
+  max-width: 25px;
+  max-height: 25px;
+  border: 3px solid black;
+}
