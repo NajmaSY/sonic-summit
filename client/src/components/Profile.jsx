@@ -11,6 +11,10 @@ const Profile = () => {
 
   return (
     isAuthenticated && (
+      <div className="profilecontainer">
+        <img src={user.picture} alt={user.name} className="profileimage" />
+        <h2 className="profilename">{user.name}</h2>
+        <p className="profileemail">{user.email}</p>
       <div className="navBarSpace">
         <img src={user.picture} alt={user.name} className="loginImg" />
         <p>Hello {user.name}!</p>
