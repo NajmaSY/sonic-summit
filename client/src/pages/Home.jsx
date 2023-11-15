@@ -5,8 +5,34 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import liked from "../assets/liked.png";
 import notLiked from "../assets/notliked.png";
+import { useState } from "react";
+import axios from "axios";
 
-export default function Home({ artists, favouriteArtist }) {
+export default function Home({ artists }) {
+  const [favourite, setFavourite] = useState({});
+
+  function toggleFav(artistID) {
+    console.log("clicking!");
+    try {
+      const userId = "something";
+      let response = axios.put("/artists/id/favourite", userId);
+      let updatedArtist = response.data;
+
+      const updatedArtists = artists.map((artist) => {
+        console.log(artist);
+        // check through artist and flip favourites value to opposite of whatever it is now.
+        if (artistID === artist._id) {
+          return updatedArtist;
+        }
+        return artist;
+      });
+      setFavourite(updatedArtists);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  console.log(artists);
   return (
     //header in first
     <>
@@ -23,7 +49,7 @@ export default function Home({ artists, favouriteArtist }) {
                 <h2 className="artist-name-carosel">{artist.name}</h2>
               </Link>
 
-              <button onClick={() => favouriteArtist(artist._id)}>
+              <button onClick={() => toggleFav(artist._id)}>
                 <img src={artist.favourite ? liked : notLiked} alt="heart" />
               </button>
             </div>
