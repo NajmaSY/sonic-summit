@@ -6,110 +6,50 @@ body {
   background: url("assets/background.png");
   background-size: cover;
   font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
-}
-.newArtist {
-  font-family: "Inter", sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
 }
 
-.artName {
-  font-family: "Inter", sans-serif;
+.artistContainer {
+  height: 75vh;
+  width: 75vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: blueviolet;
 }
-
-.artYoutube {
+.headerItem {
   font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.yTicon {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.artFacebook {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fBicon {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.artInsta {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.iTicon {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.artImage {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.favArt {
   color: white;
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-self: flex-start;
 }
-.aboutArt {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.iconItem {
+  max-width: 10px;
+  max-height: 10px;
+  background: none;
+  justify-content: space-between;
+  align-self: flex-end;
 }
-.aboutArt {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.imageItem {
+  max-width: 50px;
+  max-height: 50px;
+  justify-content: flex-start;
+  align-self: center;
 }
-.timeArt {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* .aboutItem {
+}*/
+.listenItem {
+  max-width: 150px;
+  max-height: 100px;
+  justify-content: flex-baseline;
+  align-self: baseline;
 }
-.artForm {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.artListen {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.artVideo {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.formItem {
+  justify-content: flex-end;
+  align-self: flex-end;
+  max-width: 25px;
+  max-height: 25px;
+  border: 3px solid black;
 }
