@@ -3,8 +3,10 @@ import Form from "../components/Form";
 import Logo from "../assets/logo.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import liked from "../assets/liked.png";
+import notLiked from "../assets/notliked.png";
 
-export default function Home({ artists, setArtists, favouriteArtist }) {
+export default function Home({ artists, favouriteArtist }) {
   return (
     //header in first
     <>
@@ -13,24 +15,20 @@ export default function Home({ artists, setArtists, favouriteArtist }) {
 
       <div className="artistSection">
         <h2 className="artists-carosel">Artists</h2>
-        <div>
-          {artists.map((artist) => {
-            return (
-              <carousel className="crsl" autoPlay infinateLoop centerMode>
-                <div key={artist._id} className="artistHome">
-                  <Link to={`/artist/${artist._id}`}>
-                    <img src={artist.imageUrl} className="image-carosel" />
-                    <h2 className="artist-name-carosel">{artist.name}</h2>
-                  </Link>
+        <Carousel className="crsl" autoPlay infiniteLoop centerMode>
+          {artists.map((artist) => (
+            <div key={artist._id} className="artistHome">
+              <Link to={`/artist/${artist._id}`}>
+                <img src={artist.imageUrl} className="image-carosel" />
+                <h2 className="artist-name-carosel">{artist.name}</h2>
+              </Link>
 
-                  <button onClick={() => favouriteArtist(artist.favourite)}>
-                    ❤️
-                  </button>
-                </div>
-              </carousel>
-            );
-          })}
-        </div>
+              <button onClick={() => favouriteArtist(artist._id)}>
+                <img src={artist.favourite ? liked : notLiked} alt="heart" />
+              </button>
+            </div>
+          ))}
+        </Carousel>
       </div>
 
       <div className="scheduleSection">
