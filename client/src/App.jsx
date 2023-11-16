@@ -85,10 +85,10 @@ function App() {
               <a href="/MySchedule">My Schedule</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="/#about">About</a>
             </li>
             <li>
-              <a href="#book">Book</a>
+              <a href="/#book">Book</a>
             </li>
           </ul>
         </nav>
