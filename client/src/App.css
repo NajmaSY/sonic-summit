@@ -29,7 +29,8 @@ h3 {
   text-align: center;
   font-size: 50px;
 }
-/* .artistSection {
+
+ .artistSection {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -48,10 +49,11 @@ h3 {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 6px;
-} */
+}
 
-/* .crsl {
+ .crsl {
   width: 500px;
+
   margin: auto;
   align-items: center;
 }
@@ -72,14 +74,18 @@ h3 {
 }
 
 .image-carosel {
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 60%;
+  max-height: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
   border-radius: 20px;
 } */
 
+.heartsImage {
+  width: 20px;
+  height: 20px;
+}
 .artistHome {
   font-family: "Inter", sans-serif;
   color: white;
@@ -148,6 +154,8 @@ header {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: white;
+  height: 100vh;
+  width: 0 auto;
 }
 
 nav {
