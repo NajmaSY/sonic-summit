@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./MySchedule";
 import "./MySchedule.css";
 
-export default function MySchedule({ deleteArtist, editRating }) {
+export default function MySchedule({ deleteArtist, editRating, favourites }) {
   const [mySchedule, setMySchedule] = useState([]);
   const [userEmail, setUserEmail] = useState("something"); //something for now, but will replace with actual user email
 
@@ -21,75 +21,62 @@ export default function MySchedule({ deleteArtist, editRating }) {
     };
     fetchMySchedule();
   }, [userEmail]);
-}
 
-// async function deleteArtist(event) {
-//   event.preventDefault();
-//   const API = "http://localhost:8080/myschedule";
-//   const res = await axios.post(API, formData);
-//   setArtists([...myschedule, res.data]);
-// }
+  const handleDeleteArtistClick = async (artistId) => {
+    await deleteArtist(artistId);
+    fetchMySchedule();
+  };
 
-// async function editRating(event) {
-//   event.preventDefault();
-//   const API = "http://localhost:8080/myschedule";
-//   const res = await axios.post(API, formData);
-//   setRating([...rating, res.data]);
-// }
+  const handleEditRatingClick = async (artistId, newRating) => {
+    await editRating(artistId, newRating);
+    fetchMySchedule();
+  };
 
-const handleDeleteArtistClick = async (artistId) => {
-  await deleteArtist(artistId);
-  fetchMySchedule();
-};
-
-const handleEditRatingClick = async (artistId, newRating) => {
-  await editRating(artistId, newRating);
-  fetchMySchedule();
-};
-
-// const halfwayPoint = Math.floor(dummyData.length / 2);
-// const columnA = [...dummyData].splice(0, halfwayPoint);
-// console.log(columnA);
-// const columnB = [...dummyData].splice(halfwayPoint);
-// console.log(columnB);
-
-return (
-  <div>
-    <h1 className="h1schedule">My Schedule</h1>
-    <div className="scheduleflex">
-      <div className="containerOne">
-        {mySchedule.map((artist, index) => (
-          <div key={index} className="scheduleItem">
-            <ul>
-              <li>Time: {artist.stageTime}</li>
-              <li>Artist: {artist.name}</li>
-              <li>Stage: {artist.stage}</li>
-              <li>Rating: {artist.rating}</li>
-            </ul>
-          </div>
-        ))}
+  return (
+    <div>
+      <div>
+        <ul>
+          {favourites.map((artist) => (
+            <li key={artist._id}>{artist.name}</li>
+          ))}
+        </ul>
       </div>
-      <div className="containerTwo">
-        {mySchedule.map((artist, index) => (
-          <div key={index} className="scheduleItem">
-            <ul>
-              <li>Time: {artist.stageTime}</li>
-              <li>Artist: {artist.name}</li>
-              <li>Stage: {artist.stage}</li>
-              <li>Rating: {artist.rating}</li>
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div className="myschedulebuttons">
-        {/* <button onClick={handleMyScheduleClick}>MY SCHEDULE</button> */}
-        <button onClick={() => handleDeleteArtistClick(artist._id)}>
-          DELETE ARTIST
-        </button>
-        <button onClick={() => handleEditRatingClick(artist._id, newRating)}>
-          EDIT RATING
-        </button>
+      <h1 className="h1schedule">My Schedule</h1>
+      <div className="scheduleflex">
+        <div className="containerOne">
+          {mySchedule.map((artist, index) => (
+            <div key={index} className="scheduleItem">
+              <ul>
+                <li>Time: {artist.stageTime}</li>
+                <li>Artist: {artist.name}</li>
+                <li>Stage: {artist.stage}</li>
+                <li>Rating: {artist.rating}</li>
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="containerTwo">
+          {mySchedule.map((artist, index) => (
+            <div key={index} className="scheduleItem">
+              <ul>
+                <li>Time: {artist.stageTime}</li>
+                <li>Artist: {artist.name}</li>
+                <li>Stage: {artist.stage}</li>
+                <li>Rating: {artist.rating}</li>
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="myschedulebuttons">
+          {/* <button onClick={handleMyScheduleClick}>MY SCHEDULE</button> */}
+          <button onClick={() => handleDeleteArtistClick(artist._id)}>
+            DELETE ARTIST
+          </button>
+          <button onClick={() => handleEditRatingClick(artist._id, newRating)}>
+            EDIT RATING
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
