@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
 import Logo from "../assets/logo.png";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Liked from "../assets/liked.png";
 import notLiked from "../assets/notliked.png";
 import { useState } from "react";
@@ -41,6 +39,7 @@ export default function Home({ artists }) {
       <a id="artists"></a>
       <div className="artistSection">
         <h2>Artists</h2>
+
         {artists.map((artist) => (
           <div key={artist._id} className="artistHomeContainer">
             <Link to={`/artist/${artist._id}`}>
@@ -57,6 +56,7 @@ export default function Home({ artists }) {
             {/* <button onClick={() => toggleFav(artist._id)}>
                 <img src={artist.favourite ? liked : notLiked} alt="heart" />
               </button> */}
+
           </div>
         ))}
       </div>

@@ -128,7 +128,7 @@ async function seed() {
       stage: "Three",
       stageTime: 1900,
       favourite: true,
-      youtube: "https://www.youtube.com/embed/6drfp_3823I?si=uGMvvqM-YkKO1mI3",
+      youtube: "https://www.youtube.com/embed/gLF-_Z8TK1k?si=05EJ9l_ncXX_fuO_",
       instagram: "https://www.instagram.com/bjork/?hl=en",
       facebook: "https://www.facebook.com/bjork/",
       rating: 5,
