@@ -58,7 +58,7 @@ app.put("/artists/:id", async (request, response) => {
   }
 });
 
-app.put("/artists/favourite/:id", async (request, response) => {
+app.post("/artists/favourite/:id", async (request, response) => {
   try {
     const userEmail = request.body.email; //with the likes(favourite)
     const id = request.params.id;
@@ -78,7 +78,7 @@ app.get("/MySchedule", async (request, response) => {
     const likes = await Like.find({ email: userEmail });
 
     //Extract artistIds from the likes
-    const artistIds = likes.map((like) => like.artistId);
+    const artistIds = likes.map((like) => like.artistID);
 
     //Find all artists with the extracted artistIds
     const schedule = await Artist.find({ _id: { $in: artistIds } });
