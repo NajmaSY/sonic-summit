@@ -143,8 +143,7 @@ async function seed() {
       stage: "One",
       stageTime: 2030,
       favourite: true,
-      youtube:
-        "https://www.youtube.com/watch?v=Wo80bXyEbkE&pp=ygUOTG9uZG9uIEdyYW1tYXI%3D",
+      youtube: "https://www.youtube.com/embed/Wo80bXyEbkE?si=MQWqS__hg4kahMCM",
       instagram: "https://www.instagram.com/londongrammar/",
       facebook: "https://www.facebook.com/londongrammar/?locale=en_GB",
       rating: 4,
