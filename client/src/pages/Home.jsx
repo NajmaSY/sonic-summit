@@ -21,7 +21,7 @@ export default function Home({ artists }) {
 
     //send updated favourites to server
     try {
-      const response = await axios.put(
+      const response = await axios.post(
         `http://localhost:8080/artists/favourite/${artistId}`,
         {
           email: "something",
@@ -30,7 +30,6 @@ export default function Home({ artists }) {
       console.log(response.data);
     } catch (error) {
       console.log(error);
-      response.json("error adding favourite artist");
     }
   };
 
@@ -49,7 +48,6 @@ export default function Home({ artists }) {
               <h2 className="artist-name-carosel">{artist.name}</h2>
             </Link>
 
-
             <img
               className="heartsImage"
               src={favouriteArtists[artist._id] ? Liked : notLiked}
@@ -61,7 +59,6 @@ export default function Home({ artists }) {
               </button> */}
           </div>
         ))}
-
       </div>
 
       <div className="scheduleSection">

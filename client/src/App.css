@@ -30,7 +30,7 @@ h3 {
   font-size: 50px;
 }
 
- .artistSection {
+.artistSection {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -51,7 +51,7 @@ h3 {
   border-radius: 6px;
 }
 
- .crsl {
+.crsl {
   width: 500px;
 
   margin: auto;
@@ -80,9 +80,8 @@ h3 {
   flex-direction: row;
   align-items: center;
   border-radius: 20px;
-} */
-
-.heartsImage {
+}
+*/ .heartsImage {
   width: 20px;
   height: 20px;
 }
@@ -98,7 +97,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-} 
+}
 
 .scheduleflex {
   font-size: 20px;
@@ -156,6 +155,8 @@ header {
   color: white;
   height: 100vh;
   width: 0 auto;
+  top: 0;
+  position: absolute;
 }
 
 nav {
