@@ -62,10 +62,10 @@ app.put("/artists/:id/favourite", async (request, response) => {
   try {
     const userEmail = request.body.email; //with the likes(favourite)
 
-    const artistIds = likes.map((like) => like.artistId);
-
     //find user's likes
     const likes = await Like.find({ email: userEmail });
+
+    const artistIds = likes.map((like) => like.artistId);
 
     //find artists with the found artistIds
     const favourites = await Artist.find({ _id: { $in: artistIds } });

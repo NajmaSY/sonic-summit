@@ -3,39 +3,27 @@ import Form from "../components/Form";
 import Logo from "../assets/logo.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import liked from "../assets/liked.png";
+import Liked from "../assets/liked.png";
 import notLiked from "../assets/notliked.png";
 import { useState } from "react";
 import axios from "axios";
+import Profile from "../components/Profile";
 
 export default function Home({ artists }) {
-  const [favourite, setFavourite] = useState({});
+  const [favouriteArtists, setFavouriteArtists] = useState({});
 
-  function toggleFav(artistID) {
-    console.log("clicking!");
-    try {
-      const userId = "something";
-      let response = axios.put(
-        `http://localhost:8080/artists/${artistID}/favourite`,
-        userId
-      );
-      let updatedArtist = response.data;
+  const toggleFav = (artistId) => {
+    //check if artistID is in favourites
+    const isFavourited = favouriteArtists[artistId];
 
-      const updatedArtists = artists.map((artist) => {
-        console.log(artist);
-        // check through artist and flip favourites value to opposite of whatever it is now.
-        if (artistID === artist._id) {
-          return updatedArtist;
-        }
-        return artist;
-      });
-      setFavourite(updatedArtists);
-    } catch (err) {
-      console.log(err);
-    }
-  }
+    setFavouriteArtists({ ...favouriteArtists, [artistId]: !isFavourited });
 
-  console.log(artists);
+    //send updated favourites to server
+    axios.put(`/artists/${artistId}/favourite`, {
+      email: "user@example.com",
+      likes: Object.keys(favouriteArtists).filter((id) => favouriteArtists[id]),
+    });
+  };
   return (
     //header in first
     <>
@@ -51,11 +39,20 @@ export default function Home({ artists }) {
               <h2 className="artist-name-carosel">{artist.name}</h2>
             </Link>
 
-            <button onClick={() => toggleFav(artist._id)}>
-              <img src={artist.favourite ? liked : notLiked} alt="heart" />
-            </button>
-          </div>
-        ))}
+
+              <img
+                className="heartsImage"
+                src={favouriteArtists[artist._id] ? Liked : notLiked}
+                alt="heart-icon"
+                onClick={() => toggleFav(artist._id)}
+              />
+              {/* <button onClick={() => toggleFav(artist._id)}>
+                <img src={artist.favourite ? liked : notLiked} alt="heart" />
+              </button> */}
+            </div>
+          ))}
+        </Carousel>
+
       </div>
 
       <div className="scheduleSection">
@@ -129,15 +126,6 @@ export default function Home({ artists }) {
         </p>
         <h3>Get in touch</h3>
         <p>Email: Phone:</p>
-        {/* <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31119.385489286!2d-2.404818897800208!3d55.3684140520141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487d8ed9a3a41967%3A0xfb85d138cda28d66!2sThe%20Cheviot%20Hills!5e0!3m2!1sen!2suk!4v1699963731287!5m2!1sen!2suk"
-          width="400"
-          height="300"
-          style="border:0;"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe> */}
       </div>
       <a id="book"></a>
       <div className="bookingSection">
@@ -146,6 +134,61 @@ export default function Home({ artists }) {
         <form action=""></form>
         <button></button>
       </div>
+      <form>
+        <div>
+          <label htmlFor="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="customer_name"
+            placeholder="John Doe"
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Your E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="customer_email"
+            placeholder="john.doe@email.com"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="phone">Your Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="customer_phone"
+            placeholder="+44 (0)"
+          />
+        </div>
+        <hr />
+        <div>
+          <label htmlFor="adult">Adults</label>
+          <input
+            type="number"
+            id="adult"
+            name="total_adults"
+            placeholder="1"
+            min="1"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="child">Children</label>
+          <input
+            type="number"
+            id="child"
+            name="total_children"
+            placeholder="0"
+            min="0"
+            required
+          />
+        </div>
+        <hr />
+        <button type="submit">Continue to checkout</button>
+      </form>
     </>
   );
 }
