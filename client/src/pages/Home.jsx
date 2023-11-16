@@ -34,8 +34,8 @@ export default function Home({ artists }) {
   return (
     //header in first
     <>
-      <img src={Logo} alt="" />
-      <button>Book Your Spot</button>
+      <img src={Logo} alt="" className="logoName" />
+      <button className="bookButton">Book Your Spot</button>
       <a id="artists"></a>
       <div className="artistSection">
         <h2>Artists</h2>
@@ -56,7 +56,6 @@ export default function Home({ artists }) {
             {/* <button onClick={() => toggleFav(artist._id)}>
                 <img src={artist.favourite ? liked : notLiked} alt="heart" />
               </button> */}
-
           </div>
         ))}
       </div>
@@ -65,46 +64,32 @@ export default function Home({ artists }) {
         <table>
           <tbody>
             <tr>
+              <td>TIMING</td>
               <td>MAIN STAGE</td>
-              <td>ARTIST</td>
               <td>SECOND STAGE</td>
-              <td>ARTIST</td>
+              <td>THIRD STAGE</td>
             </tr>
             <tr>
-              <td>22:00</td>
-              <td>Gorillaz</td>
-              <td>21:30</td>
-              <td>Sharon Van Etten</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>Björk</td>
-              <td>20:30</td>
+              <td>16:00</td>
               <td>Portishead</td>
-            </tr>
-            <tr>
-              <td>20:00</td>
-              <td>Beyonce</td>
-              <td>19:30</td>
-              <td>Ed Sheeran</td>
-            </tr>
-            <tr>
-              <td>19:00</td>
-              <td>The Killers</td>
-              <td>18:30</td>
+              <td>Mazzy Star</td>
               <td>Dido</td>
             </tr>
+            <td>17:30</td>
+            <td>Ed Sheeran</td>
+            <td>Beyonce</td>
+            <td>The Weekend</td>
             <tr>
-              <td>18:00</td>
-              <td>The Weekend</td>
-              <td>17:30</td>
-              <td>Mazzy Star</td>
+              <td>19:00</td>
+              <td>Sharon Van Etten</td>
+              <td>Nickelback</td>
+              <td>Bjork</td>
             </tr>
             <tr>
-              <td>17:00</td>
+              <td>20:30</td>
               <td>London Grammar</td>
-              <td>16:30</td>
-              <td>Nickelback</td>
+              <td>The Gorillaz</td>
+              <td>The Killers</td>
             </tr>
           </tbody>
         </table>
