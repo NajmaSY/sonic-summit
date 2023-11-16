@@ -58,18 +58,12 @@ app.put("/artists/:id", async (request, response) => {
   }
 });
 
-app.put("/artists/:id/favourite", async (request, response) => {
+app.put("/artists/favourite/:id", async (request, response) => {
   try {
     const userEmail = request.body.email; //with the likes(favourite)
-
-    //find user's likes
-    const likes = await Like.find({ email: userEmail });
-
-    const artistIds = likes.map((like) => like.artistId);
-
-    //find artists with the found artistIds
-    const favourites = await Artist.find({ _id: { $in: artistIds } });
-    response.status(200).json(favourites);
+    const id = request.params.id;
+    const newFavourite = await Like.create({ email: userEmail, artistID: id });
+    response.status(200).json(newFavourite);
   } catch (error) {
     console.log(error);
     response.status(500).json({ message: "internal server error" });

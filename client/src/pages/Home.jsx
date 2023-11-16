@@ -12,18 +12,28 @@ import Profile from "../components/Profile";
 export default function Home({ artists }) {
   const [favouriteArtists, setFavouriteArtists] = useState({});
 
-  const toggleFav = (artistId) => {
+  //toggleFav - do axios.post
+  const toggleFav = async (artistId) => {
     //check if artistID is in favourites
     const isFavourited = favouriteArtists[artistId];
 
     setFavouriteArtists({ ...favouriteArtists, [artistId]: !isFavourited });
 
     //send updated favourites to server
-    axios.put(`/artists/${artistId}/favourite`, {
-      email: "user@example.com",
-      likes: Object.keys(favouriteArtists).filter((id) => favouriteArtists[id]),
-    });
+    try {
+      const response = await axios.put(
+        `http://localhost:8080/artists/favourite/${artistId}`,
+        {
+          email: "something",
+        }
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+      response.json("error adding favourite artist");
+    }
   };
+
   return (
     //header in first
     <>
@@ -44,11 +54,9 @@ export default function Home({ artists }) {
                 className="heartsImage"
                 src={favouriteArtists[artist._id] ? Liked : notLiked}
                 alt="heart-icon"
+                // onClick={()=>onFavourite(artist)}
                 onClick={() => toggleFav(artist._id)}
               />
-              {/* <button onClick={() => toggleFav(artist._id)}>
-                <img src={artist.favourite ? liked : notLiked} alt="heart" />
-              </button> */}
             </div>
           ))}
         </Carousel>

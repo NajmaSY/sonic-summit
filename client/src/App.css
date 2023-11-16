@@ -30,7 +30,7 @@ h3 {
   font-size: 50px;
 }
 .crsl {
-  width: 400px;
+  width: 80%;
   margin: auto;
   align-items: center;
 }
@@ -51,14 +51,18 @@ h3 {
 }
 
 .image-carosel {
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 60%;
+  max-height: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
   border-radius: 20px;
 }
 
+.heartsImage {
+  width: 20px;
+  height: 20px;
+}
 .artistHome {
   font-family: "Inter", sans-serif;
   color: white;
@@ -127,6 +131,8 @@ header {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: white;
+  height: 100vh;
+  width: 0 auto;
 }
 
 nav {
