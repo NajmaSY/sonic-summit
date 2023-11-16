@@ -53,14 +53,12 @@ export default function Home({ artists }) {
               alt="heart-icon"
               onClick={() => toggleFav(artist._id)}
             />
-            {/* <button onClick={() => toggleFav(artist._id)}>
-                <img src={artist.favourite ? liked : notLiked} alt="heart" />
-              </button> */}
           </div>
         ))}
       </div>
 
       <div className="scheduleSection">
+        <h2>Full Schedule</h2>
         <table>
           <tbody>
             <tr>
@@ -124,62 +122,62 @@ export default function Home({ artists }) {
         <h1>Save Your Spot</h1>
         <form action=""></form>
         <button></button>
+        <form>
+          <div>
+            <label htmlFor="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="customer_name"
+              placeholder="John Doe"
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Your E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="customer_email"
+              placeholder="john.doe@email.com"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="phone">Your Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="customer_phone"
+              placeholder="+44 (0)"
+            />
+          </div>
+          <hr />
+          <div>
+            <label htmlFor="adult">Adults</label>
+            <input
+              type="number"
+              id="adult"
+              name="total_adults"
+              placeholder="1"
+              min="1"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="child">Children</label>
+            <input
+              type="number"
+              id="child"
+              name="total_children"
+              placeholder="0"
+              min="0"
+              required
+            />
+          </div>
+          <hr />
+          <button type="submit">Continue to checkout</button>
+        </form>
       </div>
-      <form>
-        <div>
-          <label htmlFor="name">Your Name</label>
-          <input
-            type="text"
-            id="name"
-            name="customer_name"
-            placeholder="John Doe"
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Your E-mail</label>
-          <input
-            type="email"
-            id="email"
-            name="customer_email"
-            placeholder="john.doe@email.com"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="phone">Your Phone</label>
-          <input
-            type="tel"
-            id="phone"
-            name="customer_phone"
-            placeholder="+44 (0)"
-          />
-        </div>
-        <hr />
-        <div>
-          <label htmlFor="adult">Adults</label>
-          <input
-            type="number"
-            id="adult"
-            name="total_adults"
-            placeholder="1"
-            min="1"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="child">Children</label>
-          <input
-            type="number"
-            id="child"
-            name="total_children"
-            placeholder="0"
-            min="0"
-            required
-          />
-        </div>
-        <hr />
-        <button type="submit">Continue to checkout</button>
-      </form>
     </>
   );
 }

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./MySchedule";
 import "./MySchedule.css";
 
-export default function MySchedule({ deleteArtist, editRating, favourites }) {
+export default function MySchedule({ deleteArtist, editRating }) {
   const [mySchedule, setMySchedule] = useState([]);
   const [userEmail, setUserEmail] = useState("something"); //something for now, but will replace with actual user email
 
@@ -27,20 +27,13 @@ export default function MySchedule({ deleteArtist, editRating, favourites }) {
     fetchMySchedule();
   };
 
-  const handleEditRatingClick = async (artistId, newRating) => {
-    await editRating(artistId, newRating);
+  const handleEditRatingClick = async (artistId) => {
+    await editRating(artistId);
     fetchMySchedule();
   };
 
   return (
-    <div>
-      <div>
-        <ul>
-          {mySchedule.map((artist) => (
-            <li key={artist._id}>{artist.name}</li>
-          ))}
-        </ul>
-      </div>
+    <div className="artist-home">
       <h1 className="h1schedule">My Schedule</h1>
       <div className="scheduleflex">
         <div className="containerOne">
@@ -48,33 +41,24 @@ export default function MySchedule({ deleteArtist, editRating, favourites }) {
             <div key={index} className="scheduleItem">
               <ul>
                 <li>Time: {artist.stageTime}</li>
+                <br />
                 <li>Artist: {artist.name}</li>
+                <br />
                 <li>Stage: {artist.stage}</li>
+                <br />
                 <li>Rating: {artist.rating}</li>
+                <br />
               </ul>
+              <div className="myschedulebuttons">
+                <button onClick={() => handleDeleteArtistClick(artist._id)}>
+                  DELETE ARTIST
+                </button>
+                <button onClick={() => handleEditRatingClick(artist._id)}>
+                  EDIT RATING
+                </button>
+              </div>
             </div>
           ))}
-        </div>
-        <div className="containerTwo">
-          {mySchedule.map((artist, index) => (
-            <div key={index} className="scheduleItem">
-              <ul>
-                <li>Time: {artist.stageTime}</li>
-                <li>Artist: {artist.name}</li>
-                <li>Stage: {artist.stage}</li>
-                <li>Rating: {artist.rating}</li>
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="myschedulebuttons">
-          {/* <button onClick={handleMyScheduleClick}>MY SCHEDULE</button> */}
-          <button onClick={() => handleDeleteArtistClick(artist._id)}>
-            DELETE ARTIST
-          </button>
-          <button onClick={() => handleEditRatingClick(artist._id, newRating)}>
-            EDIT RATING
-          </button>
         </div>
       </div>
     </div>

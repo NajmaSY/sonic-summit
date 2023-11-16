@@ -12,12 +12,14 @@
 
 body {
   width: 100vw;
+  height: 100%;
   background: url("assets/background.png");
   background-size: cover;
   font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 700px;
 }
 
 h1,
@@ -46,14 +48,15 @@ h3 {
 }
 
 .artistHomeContainer {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  */
+  align-items: center;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.239);
   border-radius: 6px;
   flex-direction: column;
-  width: 300px;
+  /* width: 300px; */
 }
 
 .artist-name-carosel {
@@ -63,16 +66,17 @@ h3 {
 }
 
 .image-carosel {
-  max-width: 60%;
-  max-height: 60%;
+  width: 250px;
+  /* max-height: 30%; */
   display: flex;
   flex-direction: row;
   align-items: center;
   border-radius: 20px;
 }
+
 .heartsImage {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .artistHome {
@@ -110,12 +114,48 @@ h3 {
   display: flex;
 }
 
+.scheduleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 50px;
+  background-color: rgba(71, 24, 71, 0.5);
+  flex-direction: column;
+}
+
+.scheduleSection h2 {
+  font-size: 2rem;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 50px;
+  background-color: rgba(71, 24, 71, 0.5);
+}
+
+.bookingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 50px;
+  background-color: rgba(71, 24, 71, 0.5);
+}
 /* NAV BAR CSS */
 
 header {
   background-color: #411f5273;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 20px 20px 20px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   letter-spacing: 3px;
@@ -125,6 +165,7 @@ header {
   top: 0;
   position: fixed;
   margin-bottom: 50px;
+  z-index: 500;
 }
 
 nav {
