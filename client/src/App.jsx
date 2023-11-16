@@ -107,10 +107,7 @@ function App() {
           }
         />
         <Route path="/artist/:id" element={<Artist />} />
-        <Route
-          path="/MySchedule"
-          // element={<MySchedule favouriteArtists={favouriteArtists} />}
-        />
+        <Route path="/MySchedule" element={<MySchedule />} />
       </Routes>
 
       <footer>

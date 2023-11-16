@@ -42,7 +42,7 @@ export default function Home({ artists }) {
       <div className="artistSection">
         <h2>Artists</h2>
         {artists.map((artist) => (
-          <div key={artist._id} className="artistContainer">
+          <div key={artist._id} className="artistHomeContainer">
             <Link to={`/artist/${artist._id}`}>
               <img src={artist.imageUrl} className="image-carosel" />
               <h2 className="artist-name-carosel">{artist.name}</h2>

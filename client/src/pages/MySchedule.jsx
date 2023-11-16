@@ -36,7 +36,7 @@ export default function MySchedule({ deleteArtist, editRating, favourites }) {
     <div>
       <div>
         <ul>
-          {favourites.map((artist) => (
+          {mySchedule.map((artist) => (
             <li key={artist._id}>{artist.name}</li>
           ))}
         </ul>
