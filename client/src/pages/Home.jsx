@@ -50,16 +50,17 @@ export default function Home({ artists }) {
             </Link>
 
 
-              <img
-                className="heartsImage"
-                src={favouriteArtists[artist._id] ? Liked : notLiked}
-                alt="heart-icon"
-                // onClick={()=>onFavourite(artist)}
-                onClick={() => toggleFav(artist._id)}
-              />
-            </div>
-          ))}
-        </Carousel>
+            <img
+              className="heartsImage"
+              src={favouriteArtists[artist._id] ? Liked : notLiked}
+              alt="heart-icon"
+              onClick={() => toggleFav(artist._id)}
+            />
+            {/* <button onClick={() => toggleFav(artist._id)}>
+                <img src={artist.favourite ? liked : notLiked} alt="heart" />
+              </button> */}
+          </div>
+        ))}
 
       </div>
 
