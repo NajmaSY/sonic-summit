@@ -41,14 +41,14 @@ export default function Home({ artists }) {
       <button>Book Your Spot</button>
       <a id="artists"></a>
       <div className="artistSection">
-        <h2 className="artists-carosel">Artists</h2>
-        <Carousel className="crsl" autoPlay infiniteLoop centerMode>
-          {artists.map((artist) => (
-            <div key={artist._id} className="artistHome">
-              <Link to={`/artist/${artist._id}`}>
-                <img src={artist.imageUrl} className="image-carosel" />
-                <h2 className="artist-name-carosel">{artist.name}</h2>
-              </Link>
+        <h2>Artists</h2>
+        {artists.map((artist) => (
+          <div key={artist._id} className="artistContainer">
+            <Link to={`/artist/${artist._id}`}>
+              <img src={artist.imageUrl} className="image-carosel" />
+              <h2 className="artist-name-carosel">{artist.name}</h2>
+            </Link>
+
 
               <img
                 className="heartsImage"
@@ -60,6 +60,7 @@ export default function Home({ artists }) {
             </div>
           ))}
         </Carousel>
+
       </div>
 
       <div className="scheduleSection">
