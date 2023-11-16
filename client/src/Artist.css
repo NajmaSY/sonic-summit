@@ -12,7 +12,6 @@ body {
 }
 
 .artistContainer {
-
   height: 50vh;
   width: 100vw;
   display: flex;
@@ -33,7 +32,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin: 20px;
-
 }
 
 .headerItem {
