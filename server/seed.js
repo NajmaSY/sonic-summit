@@ -113,7 +113,7 @@ async function seed() {
         "https://miro.medium.com/v2/resize:fit:530/1*mDDtoX0tTcoNQ3z_Rbb5bg.jpeg",
       stage: "Two",
       stageTime: 1900,
-      favourite: false,
+      favourite: true,
       youtube: "https://www.youtube.com/embed/_1hgVcNzvzY?si=wRlVXI0F28VMV4OM",
       instagram: "https://www.instagram.com/nickelback/?hl=en",
       facebook: "https://www.facebook.com/Nickelback/?locale=en_GB",

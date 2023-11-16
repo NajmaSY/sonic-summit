@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const Artist = require("./models/artist");
-const User = require("./models/user");
+const Like = require("./models/like");
 require("dotenv").config();
 const PORT = 8080;
 const app = express();
@@ -58,69 +58,38 @@ app.put("/artists/:id", async (request, response) => {
   }
 });
 
-app.put("/artists/:id/favorite", async (request, response) => {
+app.put("/artists/:id/favourite", async (request, response) => {
   try {
-    const artistId = request.params.id;
-    const userId = request.body.userId;
+    const userEmail = request.body.email; //with the likes(favourite)
 
-    //Find the user in the database
-    const user = await User.findById(userId);
+    const artistIds = likes.map((like) => like.artistId);
 
-    //Check if the artist is already favorited by the user
-    const isFavorited = user.favoriteArtists.some((fav) =>
-      fav.equals(artistId)
-    );
+    //find user's likes
+    const likes = await Like.find({ email: userEmail });
 
-    if (!isFavorited) {
-      //If not favorited, add the artist to the user's favorites
-      user.favoriteArtists.push(artistId);
-      //Save the updated user data
-      await user.save();
-
-      //Update the artist's favorites list
-      const updatedArtist = await Artist.findByIdAndUpdate(
-        artistId,
-        { $push: { favorites: userId } },
-        { new: true }
-      );
-
-      //updated artist data
-      response.json(updatedArtist);
-    } else {
-      // If artist is already favorited by user
-      response.status(400).json({ message: "Artist already favorited" });
-    }
+    //find artists with the found artistIds
+    const favourites = await Artist.find({ _id: { $in: artistIds } });
+    response.status(200).json(favourites);
   } catch (error) {
-    // Handle any errors that might occur during the process
     console.log(error);
-    response.status(500).json({ message: "Internal Server Error" });
+    response.status(500).json({ message: "internal server error" });
   }
 });
 
-app.put("/artists/:id/schedule", async (request, response) => {
+app.get("/MySchedule", async (request, response) => {
   try {
-    const artistId = request.params.id;
-    const userId = request.body.userId;
+    const userEmail = request.query.userEmail;
 
-    const user = await User.findById(userId);
-    const isScheduled = user.schedule.some((scheduled) =>
-      scheduled.equals(artistId)
-    );
+    //Find all likes for the user in the database
+    const likes = await Like.find({ email: userEmail });
 
-    if (!isScheduled) {
-      user.schedule.push(artistId);
-      await user.save();
+    //Extract artistIds from the likes
+    const artistIds = likes.map((like) => like.artistId);
 
-      const updatedArtist = await Artist.findByIdAndUpdate(
-        artistId,
-        { $push: { schedule: userId } },
-        { new: true }
-      );
+    //Find all artists with the extracted artistIds
+    const schedule = await Artist.find({ _id: { $in: artistIds } });
 
-      response.json(updatedArtist);
-    } else {
-      response.status(400).json({ message: "Artist already scheduled" });
-    }
+    response.status(200).json(schedule);
   } catch (error) {
     console.log(error);
     response.status(500).json({ message: "Internal Server Error" });
