@@ -107,7 +107,12 @@ function App() {
           }
         />
         <Route path="/artist/:id" element={<Artist />} />
-        <Route path="/MySchedule" element={<MySchedule />} />
+        <Route
+          path="/MySchedule"
+          element={
+            <MySchedule deleteArtist={deleteArtist} editRating={editRating} />
+          }
+        />
       </Routes>
 
       <footer>

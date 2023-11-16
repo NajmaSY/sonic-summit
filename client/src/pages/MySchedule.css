@@ -1,35 +1,7 @@
 .h1schedule {
   text-align: center;
   font-size: 50px;
-}
-.crsl {
-  width: 400px;
-  margin: auto;
-  align-items: center;
-}
-
-.artists-carosel {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
-}
-
-.artist-name-carosel {
-  color: black;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.image-carosel {
-  max-width: 400px;
-  max-height: 400px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 20px;
+  color: #fff;
 }
 
 .artistHome {
@@ -43,49 +15,70 @@
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  padding: 30px;
+  margin: 20px;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 300px;
+}
+
+.artist-home {
+  padding-top: 80px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .scheduleflex {
   font-size: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center; /* Centered content */
   border: 1px solid #ccc;
-  margin: 5px;
-  padding: 10px;
+  margin: 20px; /* Adjusted margin */
   opacity: 5;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
+
 .containerOne {
   display: flex;
-  justify-content: left;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjusted alignment */
   color: white;
   font-weight: bold;
+  margin-top: 20px; /* Adjusted margin */
 }
 
-.containerTwo {
-  display: flex;
-  justify-content: right;
-  flex-direction: column;
-  color: white;
-  font-weight: bold;
-}
-
-.box1,
-.box2,
-.box3,
-.box4,
-.box5,
-.box6 {
+.scheduleItem {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-bottom: 2px solid #ccc;
-  line-height: 2;
 }
 
 .myschedulebuttons {
   display: flex;
   padding: 20px;
+  justify-content: space-around;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
 }
