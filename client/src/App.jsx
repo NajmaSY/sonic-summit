@@ -47,6 +47,18 @@ function App() {
     }
   }
 
+  //edit the rating of an artist by ID
+  const editRating = async (id, newRating) => {
+    try {
+      await axios.put(`http://localhost:8080/artists/${id}`, {
+        rating: newRating,
+      });
+      alert("Rating updated successfully.");
+    } catch (error) {
+      console.error("Error updating rating:", error);
+    }
+  };
+
   return (
     <BrowserRouter>
       <header className="header">
@@ -90,6 +102,7 @@ function App() {
               artists={artists}
               setArtists={setArtists}
               deleteArtist={deleteArtist}
+              editRating={editRating}
             />
           }
         />

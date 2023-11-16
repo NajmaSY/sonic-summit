@@ -2,12 +2,11 @@
 
 #root {
   min-height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
   background: url("assets/background.png");
   background-size: cover;
   font-family: "Inter", sans-serif;
@@ -28,6 +27,45 @@ h3 {
 .h1schedule {
   text-align: center;
   font-size: 50px;
+}
+
+.artistSection {
+  /* max-width: 50%; */
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* width: 80%; */
+  flex-wrap: wrap;
+}
+
+.artistHomeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.239);
+  border-radius: 6px;
+  flex-direction: column;
+  width: 300px;
+}
+
+.artist-name-carosel {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.image-carosel {
+  max-width: 60%;
+  max-height: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+}
+.heartsImage {
+  width: 20px;
+  height: 20px;
 }
 
 .artistHome {
@@ -76,6 +114,9 @@ header {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: white;
+  width: 100%;
+  top: 0;
+  position: absolute;
 }
 
 nav {

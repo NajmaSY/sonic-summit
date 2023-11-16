@@ -86,6 +86,8 @@ export default function Artist() {
           <p>ABOUT: {artist.description}</p>
           <p>STAGE: {artist.stage}</p>
           <p>STAGE TIME: {artist.stageTime}</p>
+          <p>FAVOURITES: {artist.favourite}</p>
+          <p>RATING: {artist.rating}</p>
         </div>
 
         <div>
