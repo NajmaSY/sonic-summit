@@ -12,6 +12,14 @@ body {
 }
 
 .artistContainer {
+
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: rgb(200, 163, 234);
+
   background-color: #1a504b8f;
   display: flex;
   justify-content: center;
@@ -25,6 +33,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin: 20px;
+
 }
 
 .headerItem {
