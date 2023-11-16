@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
 import Logo from "../assets/logo.png";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import liked from "../assets/liked.png";
 import notLiked from "../assets/notliked.png";
 import { useState } from "react";
@@ -43,21 +41,20 @@ export default function Home({ artists }) {
       <button>Book Your Spot</button>
       <a id="artists"></a>
       <div className="artistSection">
-        <h2 className="artists-carosel">Artists</h2>
-        <Carousel className="crsl" autoPlay infiniteLoop centerMode>
-          {artists.map((artist) => (
-            <div key={artist._id} className="artistHome">
-              <Link to={`/artist/${artist._id}`}>
-                <img src={artist.imageUrl} className="image-carosel" />
-                <h2 className="artist-name-carosel">{artist.name}</h2>
-              </Link>
+        <h2>Artists</h2>
 
-              <button onClick={() => toggleFav(artist._id)}>
-                <img src={artist.favourite ? liked : notLiked} alt="heart" />
-              </button>
-            </div>
-          ))}
-        </Carousel>
+        {artists.map((artist) => (
+          <div key={artist._id} className="artistHome">
+            <Link to={`/artist/${artist._id}`}>
+              <img src={artist.imageUrl} />
+              <h2>{artist.name}</h2>
+            </Link>
+
+            <button onClick={() => toggleFav(artist._id)}>
+              <img src={artist.favourite ? liked : notLiked} alt="heart" />
+            </button>
+          </div>
+        ))}
       </div>
 
       <div className="scheduleSection">

@@ -29,48 +29,11 @@ h3 {
   text-align: center;
   font-size: 50px;
 }
-.crsl {
-  width: 400px;
-  margin: auto;
-  align-items: center;
-}
-
-.artists-carosel {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
-}
-
-.artist-name-carosel {
-  color: black;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.image-carosel {
-  max-width: 400px;
-  max-height: 400px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 20px;
-}
 
 .artistHome {
   font-family: "Inter", sans-serif;
   color: white;
   scroll-behavior: smooth;
-  z-index: 1;
-  position: relative;
-  background-color: rgb(201, 174, 219);
-  overflow: scroll;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .scheduleflex {
@@ -96,20 +59,6 @@ h3 {
   flex-direction: column;
   color: white;
   font-weight: bold;
-}
-
-.box1,
-.box2,
-.box3,
-.box4,
-.box5,
-.box6 {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-bottom: 2px solid #ccc;
-  line-height: 2;
 }
 
 .myschedulebuttons {
