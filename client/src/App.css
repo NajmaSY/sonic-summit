@@ -29,8 +29,29 @@ h3 {
   text-align: center;
   font-size: 50px;
 }
-.crsl {
-  width: 400px;
+/* .artistSection {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.6fr 0.6fr;
+  gap: 6px 6px;
+  grid-template-areas:
+    ". . . . . ."
+    ". . . . . .";
+}
+
+.artistContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+} */
+
+/* .crsl {
+  width: 500px;
   margin: auto;
   align-items: center;
 }
@@ -57,7 +78,7 @@ h3 {
   flex-direction: row;
   align-items: center;
   border-radius: 20px;
-}
+} */
 
 .artistHome {
   font-family: "Inter", sans-serif;
@@ -71,7 +92,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
+} 
 
 .scheduleflex {
   font-size: 20px;
